@@ -1,0 +1,28 @@
+<p>
+    First Name: <input type="text" ng-model="firstName"/>
+</p>
+<p>
+    Last Name: <input type="text" ng-model="lastName"/>
+</p>
+<p>
+    Id: <input type="text" ng-model="id"/>
+</p>
+<a class="btn btn-primary btn-lg" role="button" ng-click="goToMainPage()"> Back </a>
+<a class="btn btn-primary btn-lg" role="button" ng-click="resetData()"> Reset </a>
+<a class="btn btn-primary btn-lg" role="button" ng-click="saveData()"> Save </a>
+<p>
+    <a class="btn btn-primary btn-lg" role="button" ng-click="showHide()"> Show/Hide data </a>
+</p>
+<p>
+    <div ng-if="showSem">
+        <p>
+            First Name: {{data.firstName}}
+        </p>
+        <p>
+            Last Name: {{data.lastName}}
+        </p>
+        <p>
+            Id: {{data.id}}
+        </p>
+    </div>
+</p>
