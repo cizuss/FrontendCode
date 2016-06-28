@@ -1,0 +1,31 @@
+<select ng-options="item as item.text for item in colors track by item.text" ng-model="myColor"/>
+<p>
+
+</p>
+<select ng-options="item as item.text group by item.type for item in colors track by item.text" ng-model="myColor" ng-change="changeColor()">
+
+</select>
+<p>
+
+</p>
+<span class="ng-class: selectedColor;">
+    Some Text
+</span>
+<p> Filter: <input type="text" ng-model="filterVal"/> </p>
+<p> Order: <input type="text" ng-model="orderVal"/> </p>
+<p>
+Item List
+</p>
+<div ng-repeat="item in colors | orderBy:'-'+orderVal | filter:{text: filterVal}">
+    - {{item.text}}
+</div>
+<p>
+    Item List
+</p>
+<div ng-repeat="item in colors | orderBy:orderVal | filter:{text: filterVal} | limitTo:3">
+    - {{item.text}}
+</div>
+<p>
+    New Date : <span ng-bind="date | date : 'shortDate'"/>
+    Other Date : <span ng-bind="otherDate"></span>
+</p>
