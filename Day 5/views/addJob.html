@@ -1,0 +1,48 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Add job</h2>
+    </div>
+    <div class="panel-body">
+        <ng-form name="jobAddForm">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!--TODO#HR3-->
+                    <div class="form-group" ng-class="{ 'has-error': jobAddForm.jobIdInput.$invalid}">
+                        <!--TODO#HR2-->
+                        <label> Job Id: </label>
+                        <input name="jobIdInput" class="form-control" type="text" ng-model="job.jobId" required />
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!--TODO#HR3-->
+                    <div class="form-group" ng-class="{ 'has-error': jobAddForm.jobTitleInput.$invalid}">
+                        <!--TODO#HR2-->
+                        <label> Job Title: </label>
+                        <input name="jobTitleInput" class="form-control" type="text" ng-model="job.jobTitle" required />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <!--TODO#HR3-->
+                    <div class="form-group" ng-class="{ 'has-error': jobAddForm.maxSalaryInput.$invalid}">
+                        <!--TODO#HR2-->
+                        <label> Max Salary: </label>
+                        <input name="maxSalaryInput" class="form-control" type="number" ng-model="job.maxSalary" required />
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!--TODO#HR3-->
+                    <div class="form-group" ng-class="{ 'has-error': jobAddForm.minSalaryInput.$invalid}">
+                        <!--TODO#HR2-->
+                        <label> Min Salary: </label>
+                        <input name="minSalaryInput" class="form-control" type="number" ng-model="job.minSalary" required />
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-primary btn-lg" role="button" ng-click="addJob(job)" ng-disabled="jobAddForm.$invalid"> Add Job </a>
+        </ng-form>
+    </div>
+</div>
