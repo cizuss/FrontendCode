@@ -35,7 +35,7 @@
         Back To Home Page
     </a>
 </div>
-<div class="panel panel-default">
+<input class="panel panel-default">
     <div class="panel-heading description">
         Add Employee
     </div>
@@ -72,6 +72,14 @@
     <div id = "salary-total">
 
     </div>
+    <p>
+    Sort Type: <input type="number" id="sortType"/>
+    <button onclick="sortTable()"> Sort Table </button>
+    </p>
+    <p>
+        Filter Word: <input type="text" id="filterText"/>
+        <button onclick="filterTable()"> Filter Table </button>
+    </p>
 </div>
 </body>
 </html>
